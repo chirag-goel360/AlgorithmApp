@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class Tiles extends StatelessWidget {
   final Route<Tiles> value;
   final String name;
+  final String image_url;
 
-  const Tiles({Key key, this.value, this.name}) : super(key: key);
+  const Tiles({Key key, this.value, this.name, this.image_url}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final primary = Color(0xff706b9e);
-    final secondary = Color(0xfff29a94);
+    final primary = Colors.teal;
+    final secondary = Colors.pinkAccent;
 
     return InkWell(
       onTap:()=>{
@@ -18,7 +19,7 @@ class Tiles extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Colors.white,
+          color: Colors.white54,
         ),
         width: double.infinity,
         height: 82.0,
@@ -28,12 +29,13 @@ class Tiles extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              width: 50,
-              height: 50,
+              width: 60,
+              height: 60,
               margin: EdgeInsets.only(right: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
                 border: Border.all(width: 3, color: secondary),
+                image: DecorationImage(image: NetworkImage('$image_url'),fit: BoxFit.fill),
               ),
             ),
             Expanded(

@@ -3,6 +3,7 @@ import 'package:algo_f1/Routes/route.dart';
 import 'package:algo_f1/models/TechModel.dart';
 import 'package:algo_f1/services/api.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomeFinal extends StatefulWidget {
   @override
@@ -11,7 +12,6 @@ class HomeFinal extends StatefulWidget {
 
 class _HomeFinalState extends State<HomeFinal> {
   List<Techniques> _tech = [];
-
   @override
   void initState() {
     super.initState();
@@ -122,15 +122,16 @@ class _HomeFinalState extends State<HomeFinal> {
     return Scaffold(
       backgroundColor: Colors.black12,
       appBar: new AppBar(
-        backgroundColor: Colors.indigo,
-        title: Text("Algo for learning"),
+        backgroundColor: Colors.deepPurpleAccent,
+        title: Text("Algorithms for learning"),
         centerTitle: true,
-        leading: new Icon(Icons.book),
         actions: <Widget>[
           new IconButton(
             icon: new Icon(Icons.exit_to_app),
             tooltip: "Exit!",
-            onPressed: ()=> {},
+            onPressed: ()=> {
+              SystemChannels.platform.invokeMethod('SystemNavigator.pop'),
+            },
           ),
         ],
       ),

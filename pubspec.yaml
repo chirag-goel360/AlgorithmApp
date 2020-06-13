@@ -55,7 +55,8 @@ flutter:
     - assets/prim.png
     - assets/dijkstra.jpg
     - assets/bellman.jpg
-
+    - assets/8moveKnight.png
+    - assets/palindrome.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
