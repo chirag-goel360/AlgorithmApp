@@ -22,7 +22,6 @@ class Tiles extends StatelessWidget {
           color: Colors.white54,
         ),
         width: double.infinity,
-        height: 82.0,
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Row(

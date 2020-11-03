@@ -30,7 +30,7 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(top: 100),
-              height: MediaQuery.of(context).size.height-90,
+              height: MediaQuery.of(context).size.height,
               width: double.infinity,
               child: ListView(
                 children: <Widget>[

@@ -20,6 +20,7 @@ class _HomeFinalState extends State<HomeFinal> {
 
   _loadTechniques() async{
     String fileData =await DefaultAssetBundle.of(context).loadString("assets/tech.json");
+    print(fileData);
     setState(() {
       _tech= TechApi.allTechniquesFromJson(fileData);
     });
