@@ -9,7 +9,7 @@ class TechApi{
   }
 
   static Techniques _forMap(Map<String, dynamic> map){
-    return new Techniques(
+    return Techniques(
       name: map['name'],
       description: map['description'],
       id: map['id'],

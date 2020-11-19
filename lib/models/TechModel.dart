@@ -12,10 +12,6 @@ class Techniques{
     this.description,
     @required this.id,
     @required this.image_url,
-    @required this.data
+    @required this.data,
   });
-
-
-
-
 }

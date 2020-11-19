@@ -5,16 +5,15 @@ class Tiles extends StatelessWidget {
   final String name;
   final String image_url;
 
-  const Tiles({Key key, this.value, this.name, this.image_url}) : super(key: key);
+  Tiles({Key key, this.value, this.name, this.image_url}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final primary = Colors.teal;
     final secondary = Colors.pinkAccent;
-
     return InkWell(
-      onTap:()=>{
-        Navigator.of(context).push(value)
+      onTap:() {
+        Navigator.of(context).push(value);
       },
       child: Container(
         decoration: BoxDecoration(
@@ -22,19 +21,35 @@ class Tiles extends StatelessWidget {
           color: Colors.white54,
         ),
         width: double.infinity,
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        margin: EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 20,
+        ),
+        padding: EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 20,
+        ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
               width: 60,
               height: 60,
-              margin: EdgeInsets.only(right: 15),
+              margin: EdgeInsets.only(
+                right: 15,
+              ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
-                border: Border.all(width: 3, color: secondary),
-                image: DecorationImage(image: NetworkImage('$image_url'),fit: BoxFit.fill),
+                border: Border.all(
+                  width: 3,
+                  color: secondary,
+                ),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    '$image_url',
+                  ),
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
             Expanded(
@@ -43,13 +58,14 @@ class Tiles extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Text(
                         '$name',
                         style: TextStyle(
-                            color: primary,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                          color: primary,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                   ],
@@ -62,7 +78,3 @@ class Tiles extends StatelessWidget {
     );
   }
 }
-
-
-
-

@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'Design/HomeTechniques.dart';
 
 void main(){
-  runApp(MyApp());
-  //Used for Device rotation
-//  SystemChrome.setPreferredOrientations([
-//    DeviceOrientation.portraitUp,
-//    DeviceOrientation.portraitDown,
-//  ]);
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -29,10 +26,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: new Home(),
+        body: Home(),
       ),
     );
   }
 }
-
-
